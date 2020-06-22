@@ -1,5 +1,5 @@
  const Sensor = require('../model/post_model_sensores');
-
+//CREACION DE NUEVOS DATOS DE SENSOR
 exports.addSensor = (req, res, next) => {
   const postSensor = new Sensor({
     identificador: req.body.identificador,
@@ -9,7 +9,8 @@ exports.addSensor = (req, res, next) => {
     tipo: req.body.tipo,
     subtipo: req.body.subtipo,
     habilitado: req.body.habilitado,
-    medicion: req.body.medicion
+    medicion: req.body.medicion,
+    task: req.body.task
     });
   postSensor
     .save()
@@ -40,7 +41,7 @@ exports.showSingleSensor = (req, res, next) => {
     })
     .catch(err => res.status(400).send(err));
 };
-
+//ACTUALIZACION DATOS DE SENSOR
 exports.updateSensor = (req, res, next) => {
   Sensor.findById(req.body.id).then(result => {
   result.identificador = req.body.identificador,
@@ -50,6 +51,7 @@ exports.updateSensor = (req, res, next) => {
     result.subtipo = req.body.subtipo,
     result.habilitado = req.body.habilitado,
     result.medicion = req.body.medicion;
+    result.task = req.body.task;
     return result.save();
   }).then(postSensor => {
     res.send('Medición de sensor actualizada con éxito');

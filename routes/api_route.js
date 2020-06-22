@@ -4,10 +4,6 @@ const controllerSensores = require('../controller/controller_sensores');
 const controllerActuadores = require('../controller/controller_actuadores');
 const controllerRegistros = require('../controller/controller_registros');
 const controllerUmbrales = require('../controller/controller_umbrales');
-const controllerTasks = require('../controller/controller_tasks');
-
-//endpoint Tasks
-router.post('/api/new', controllerTasks.addTask);
 
 //endPoint Sensores
 router.post('/sensores', controllerSensores.addSensor);
