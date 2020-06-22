@@ -4,8 +4,9 @@ const app = express();
 const mongodb = process.env.MONGODB; //aca declaro que voy a usar una variable de entorno
 const postRoutes = require('./routes/api_route');
 const Pusher = require('pusher');
-const channel = 'sensores';
+const channel = 'sensores'; 
 
+// En el siguiente blowue armo el objeto para suscribir al canal de pusher
 const pusher = new Pusher({
     appId: '1020587',
     key: '9456bc135d545fdf5c87',
@@ -29,7 +30,7 @@ app.use('/', postRoutes);
 
 
 app.get('/', (req, res, next) => {
-    res.send('running node-api');
+    res.send('API REST Desarrollada por Gastón Valdés para el Trabajo Final de Graduación de Licenciatura en Informatica (2020) - Esta API cumple la funcion de mediar entre el Front y la base Mongo que persiste la informacion del sistema');
 });
 mongoose.connect(mongodb);
 
