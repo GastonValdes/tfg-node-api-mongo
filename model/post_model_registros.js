@@ -4,11 +4,11 @@ const Schema = mongoose.Schema;
 const postSchemaRegistros = new Schema({
     identificador: {
         type: String,
-        required: true
+        
     },
     actividad: {
-        type: String,
-        required: true
+        type: String
+        
     },
     actuador: {
         type: String
@@ -19,6 +19,26 @@ const postSchemaRegistros = new Schema({
     date: {
         type: Date,
         default: Date.now()
+    },
+    dir_ip: {
+        type: String        
+    },
+    dir_mac: {
+        type: String        
+    },
+      
+    tipo: {
+        type: String
+    },
+    subtipo: {
+        type: String
+    },
+      
+    habilitado: {
+        type: Boolean        
+    },
+    medicion: {
+        type: Number
     }
 });
 

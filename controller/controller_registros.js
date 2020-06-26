@@ -5,7 +5,13 @@ exports.addRegistro = (req, res, next) => {
     identificador: req.body.identificador,
     actividad: req.body.actividad,
     actuador: req.body.actuador,
-    sensor: req.body.sensor
+    sensor: req.body.sensor,
+    dir_ip: req.body.dir_ip,
+    dir_mac: req.body.dir_mac,
+    tipo: req.body.tipo,
+    subtipo: req.body.subtipo,
+    habilitado: req.body.habilitado,
+    medicion: req.body.medicion
     });
   postRegistro
     .save()
