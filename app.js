@@ -105,7 +105,7 @@ if(change.operationType === 'insert') {
       ); 
     } else if(change.operationType === 'delete') {
       pusher.trigger(
-        channel1,
+        channel2,
         'deleted', 
         change.documentKey._id
       );

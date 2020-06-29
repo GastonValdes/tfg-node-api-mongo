@@ -16,7 +16,7 @@ const postSchemaUmbrales = new Schema({
         required: true
     },
     valor: {
-        type: String,
+        type: Number,
         required: true
     },
     habilitado: {

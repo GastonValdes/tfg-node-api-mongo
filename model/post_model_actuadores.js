@@ -3,34 +3,30 @@ const Schema = mongoose.Schema;
 
 const postSchemaActuadores = new Schema({
     dir_ip: {
-    type: String,
-    required: true
+    type: String
+    
     },
     dir_mac: {
-        type: String,
-        required: true
+        type: String
         },
         
     identificador: {
-        type: String,
-        required: true
+        type: String
+        
     },
     tipo: {
-        type: String,
-        required: true
+        type: String
+        
     },
     subtipo: {
-        type: String,
-        required: true
+        type: String
     },
     habilitado: {
-        type: Boolean,
-        required: true
+        type: Boolean
     },
     operacion: {
-        type: String,
-        required: true
-    },
+        type: String
+        },
     date: {
         type: Date,
         default: Date.now()

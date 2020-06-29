@@ -1,5 +1,6 @@
  const Sensor = require('../model/post_model_sensores'); //Importo el modelo de sensores
- 
+
+
 //CREACION DE NUEVOS DATOS DE SENSOR
 exports.addSensor = (req, res, next) => {
   const postSensor = new Sensor({
@@ -53,7 +54,6 @@ exports.updateSensor = (req, res, next) => {
     result.subtipo = req.body.subtipo,
     result.habilitado = req.body.habilitado,
     result.medicion = req.body.medicion;
-    result.task = req.body.task;
     return result.save();
   }).then(postSensor => {
     res.send('Medición de sensor actualizada con éxito');

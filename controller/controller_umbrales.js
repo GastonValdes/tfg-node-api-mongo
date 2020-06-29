@@ -19,7 +19,7 @@ exports.addUmbral = (req, res, next) => {
       res.status(400).send(err);
     });
 };
-
+ 
 exports.showUmbrales = (req, res, next) => {
   Umbral.find()
     .then(result => {

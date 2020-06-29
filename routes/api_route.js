@@ -4,6 +4,8 @@ const controllerSensores = require('../controller/controller_sensores');
 const controllerActuadores = require('../controller/controller_actuadores');
 const controllerRegistros = require('../controller/controller_registros');
 const controllerUmbrales = require('../controller/controller_umbrales');
+const controllerCalculos = require('../controller/controller_calculos');
+
 
 //endPoint Sensores
 router.post('/sensores', controllerSensores.addSensor);
@@ -29,5 +31,8 @@ router.get('/registros', controllerRegistros.showARegistros);
 router.get('/registros/:id', controllerRegistros.showSingleRegistro);
 router.patch('/registros', controllerRegistros.updateRegistro);
 router.delete('/registros/:id', controllerRegistros.deleteRegistro);
+//endPoint Calculos
+router.get('/calculos', controllerCalculos.executeCalculos);
+
 
 module.exports = router;
