@@ -29,9 +29,6 @@ const postSchemaSensores = new Schema({
     },
     medicion: {
         type: Number
-    },
-    actividad: {
-        type: String
     }
    
 });

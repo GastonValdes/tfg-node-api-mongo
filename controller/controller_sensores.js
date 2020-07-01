@@ -46,7 +46,7 @@ exports.showSingleSensor = (req, res, next) => {
 };
 //ACTUALIZACION DATOS DE SENSOR
 exports.updateSensor = (req, res, next) => {
-  Sensor.findById(req.body.id).then(result => {
+  Sensor.findById(req.body._id).then(result => {
   result.identificador = req.body.identificador,
     result.dir_ip = req.body.dir_ip,
     result.dir_mac= req.body.dir_mac,
